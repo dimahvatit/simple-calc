@@ -22,7 +22,7 @@ class Calculator {
         }
 
         this.operation = operation;
-        this.prevOperand = this.currOperand + operation;
+        this.prevOperand = this.currOperand;
         this.currOperand = '';
     }
 
@@ -82,9 +82,14 @@ class Calculator {
         }
     }
 
+
     updateDisplay() {
         this.currOperandTextEl.innerText = this.getDisplayNumber(this.currOperand);
-        this.prevOperandTextEl.innerText = this.getDisplayNumber(this.prevOperand);
+        if (this.operation != null) {
+            this.prevOperandTextEl.innerText = `${this.getDisplayNumber(this.prevOperand)} ${this.operation}`;
+        } else {
+            this.prevOperandTextEl.innerText = '';
+        }
     }
 }
 
