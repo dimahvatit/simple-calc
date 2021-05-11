@@ -1,0 +1,106 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: inherit;
+}
+
+body {
+  font-family: "Orbitron", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -o-linear-gradient(80deg, #8559cc, #3addfa);
+  background: linear-gradient(10deg, #8559cc, #3addfa);
+}
+
+.wrapper {
+  background-color: #444444;
+  min-width: 450px;
+  border-radius: 20px;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  grid-template-columns: repeat(4, 130px);
+  grid-template-rows: minmax(150px, auto) repeat(5, 1fr);
+  padding: 20px;
+  height: 750px;
+  -webkit-box-shadow: 6px -4px #353535, 60px -30px 5px rgba(114, 114, 114, 0.5);
+          box-shadow: 6px -4px #353535, 60px -30px 5px rgba(114, 114, 114, 0.5);
+}
+.wrapper .screen {
+  grid-column: 1/-1;
+  background-color: rgba(212, 103, 0, 0.5);
+  border-radius: 5px;
+  margin: 0 10px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 20px;
+  font-weight: bold;
+  word-wrap: break-word;
+  word-break: break-all;
+  letter-spacing: 4px;
+}
+.wrapper .screen .previous-operand {
+  font-size: 30px;
+  color: #e29725;
+}
+.wrapper .screen .current-operand {
+  font-size: 40px;
+  color: #fdb13f;
+}
+.wrapper button {
+  font-family: "Black Ops One", cursive;
+  background-color: #7e7e7e;
+  font-size: 40px;
+  color: #ff960d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  outline: none;
+  border-radius: 3px;
+  margin: 10px;
+  cursor: pointer;
+  border: none;
+  -webkit-box-shadow: -2px -3px 3px 5px rgba(34, 60, 80, 0.6) inset;
+          box-shadow: -2px -3px 3px 5px rgba(34, 60, 80, 0.6) inset;
+}
+.wrapper button:active {
+  -webkit-box-shadow: inset 3px 3px 5px #313131;
+          box-shadow: inset 3px 3px 5px #313131;
+}
+.wrapper button:active span {
+  position: relative;
+  top: 2px;
+  left: 2px;
+}
+.wrapper button.span-two {
+  grid-column: span 2;
+}
