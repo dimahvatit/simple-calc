@@ -1,2 +1,4 @@
 # simple-calc
-a simple calculator
+a simple JS calculator
+
+link: https://dimahvatit.github.io/simple-calc/
